@@ -1,12 +1,12 @@
-// middleware.ts
+// middleware.ts（修改后）
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-// 定义密码（建议从环境变量读取，避免硬编码）
-const PROTECTED_PASSWORD = process.env.ACCESS_PASSWORD || 'your-default-password'
+// 从环境变量读取密码（不再硬编码）
+const PROTECTED_PASSWORD = process.env.ACCESS_PASSWORD  // 这里用 process.env 读取
 
 export function middleware(request: NextRequest) {
-  // 跳过静态资源和API路由（可选）
+  // 跳过静态资源和API路由
   if (request.nextUrl.pathname.startsWith('/_next/') || request.nextUrl.pathname.startsWith('/api/')) {
     return NextResponse.next()
   }
@@ -22,7 +22,6 @@ export function middleware(request: NextRequest) {
   return NextResponse.next()
 }
 
-// 配置需要保护的路径（这里保护所有路径）
 export const config = {
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 }
