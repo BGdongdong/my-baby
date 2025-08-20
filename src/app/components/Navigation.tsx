@@ -19,7 +19,7 @@ export default function Navigation({ activeTab, setActiveTab }: NavigationProps)
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
-            <h1 className="text-xl font-bold text-gray-800">小好小宇宙</h1>
+            <h1 className="text-xl font-bold text-gray-800">成长记录</h1>
           </div>
           
           <div className="hidden md:flex space-x-1">
