@@ -43,7 +43,7 @@ body {
   .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    border: 1px solid #e5e7eb;
+    border: 1px solid #15e7d6;
     border-radius: 0.5rem;
     overflow: hidden;
   }
